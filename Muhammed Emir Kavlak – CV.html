@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muhammed Emir Kavlak – Etkileşimli CV</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap">
+<style>
+:root{--bg:#e8eef4;--panel:#fff;--ink:#14222f;--mute:#53667a;--line:#cfd9e3;--acc:#1b5cc4;--acc-ink:#fff;--hit:#fff1b8;--hit-line:#e0b400;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1822;--panel:#182430;--ink:#e6edf4;--mute:#9db0c2;--line:#2b3b4b;--acc:#6aa3ff;--acc-ink:#0b1622;--hit:#3b3410;--hit-line:#e0b400}}
+:root[data-theme="dark"]{--bg:#0f1822;--panel:#182430;--ink:#e6edf4;--mute:#9db0c2;--line:#2b3b4b;--acc:#6aa3ff;--acc-ink:#0b1622;--hit:#3b3410;--hit-line:#e0b400}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+.wrap{max-width:980px;margin:0 auto;padding:24px 16px 56px;display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:820px){.wrap{grid-template-columns:290px 1fr;align-items:start}.side{position:sticky;top:20px}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px}
+h1{font-size:1.75rem;line-height:1.15;margin:0 0 6px;font-weight:800;letter-spacing:-.01em}
+.role{color:var(--mute);margin:0 0 18px}
+h2{font-size:1.15rem;margin:0 0 12px;font-weight:700}
+.contact{display:grid;gap:8px}
+.contact button,.contact a,.tools button{font:inherit;text-align:left;background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:8px 10px;cursor:pointer;text-decoration:none;display:block}
+.contact button:hover,.contact a:hover,.tools button:hover{border-color:var(--acc)}
+.tools{display:flex;gap:8px;margin-top:14px}
+.tools button{flex:1;text-align:center}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+main{display:grid;gap:20px}
+.hint{color:var(--mute);margin:0 0 14px;font-size:.95rem}
+.group{margin:0 0 14px}
+.group h3{font-size:.95rem;margin:0 0 8px;color:var(--mute);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:.92rem;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:5px 12px;cursor:pointer}
+.chip:hover{border-color:var(--acc)}
+.chip[aria-pressed="true"]{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
+.chip.rel{border-color:var(--hit-line);background:var(--hit)}
+#status{min-height:1.6em;margin:12px 0 0;font-weight:500}
+.task{list-style:none;margin:0 0 10px;padding:0}
+.task button{width:100%;font:inherit;text-align:left;background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:12px 14px;cursor:pointer;display:flex;justify-content:space-between;gap:12px}
+.task button[aria-expanded="true"]{border-color:var(--acc)}
+.task.hit button{background:var(--hit);border-color:var(--hit-line)}
+.task.dim{opacity:.4}
+.task p{margin:6px 2px 0;padding:0 12px;color:var(--mute);font-size:.93rem}
+.task .more{display:none}.task.open .more{display:block}
+.sign{flex:none;font-weight:700;color:var(--acc)}
+.sub{margin:0 0 4px;font-weight:700}
+.muted{color:var(--mute);margin:0}
+ul.plain{margin:0;padding-left:1.1rem}
+@media print{.tools,.hint,#status{display:none}.side{position:static}body{background:#fff}.task .more{display:block}}
+@media(prefers-reduced-motion:no-preference){.task button,.chip{transition:background .15s,border-color .15s}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<aside class="side card">
+  <h1>Muhammed Emir Kavlak</h1>
+  <p class="role">Bulut Bilişim Operatörü &amp; Bilgi Teknolojileri Uzman Adayı</p>
+  <div class="contact">
+    <p class="muted" style="margin:0">Adana, Türkiye</p>
+    <button type="button" data-copy="+90 544 619 42 23">Telefonu kopyala</button>
+    <button type="button" data-copy="kavlakemir8@gmail.com">E-postayı kopyala</button>
+    <a href="https://github.com/Emir0144" target="_blank" rel="noopener">GitHub: Emir0144</a>
+  </div>
+  <p id="copied" class="muted" aria-live="polite" style="min-height:1.5em;margin:10px 0 0"></p>
+  <div class="tools">
+    <button type="button" id="theme">Tema değiştir</button>
+    <button type="button" id="print">Yazdır</button>
+  </div>
+</aside>
+
+<main>
+  <section class="card">
+    <h2>Özet</h2>
+    <p style="margin:0">Bilişim Teknolojileri Meslek Yüksekokulu Bulut Bilişim Operatörlüğü öğrencisi. Donanım bakımı, ağ kablolama, sanal makine yapılandırmaları ve Linux sistem yönetimi konularında pratik deneyime sahip; teknoloji ve BT operasyonları alanında kariyer hedefleyen disiplinli ve gelişime açık aday.</p>
+  </section>
+
+  <section class="card">
+    <h2>Teknik yetkinlikler ve staj görevleri</h2>
+    <p class="hint">Bir beceriye tıkla, o beceriyi kullandığın staj görevleri sarı renkle işaretlensin. Bir göreve tıklarsan ilgili beceriler işaretlenir.</p>
+
+    <div class="group"><h3>İşletim sistemleri ve sanallaştırma</h3>
+      <div class="chips">
+        <button class="chip" aria-pressed="false" data-t="">Linux (terminal, dosya yönetimi, dizin yapıları)</button>
+        <button class="chip" aria-pressed="false" data-t="">Windows 7/11</button>
+        <button class="chip" aria-pressed="false" data-t="">VirtualBox (sanal makine, ISO ve depolama)</button>
+      </div></div>
+    <div class="group"><h3>Donanım ve ağ teknolojileri</h3>
+      <div class="chips">
+        <button class="chip" aria-pressed="false" data-t="t2">Donanım teşhisi</button>
+        <button class="chip" aria-pressed="false" data-t="t1">SSD/RAM montajı</button>
+        <button class="chip" aria-pressed="false" data-t="t1">Termal macun yenileme</button>
+        <button class="chip" aria-pressed="false" data-t="t3 t5">RJ45 kablo sonlandırma</button>
+        <button class="chip" aria-pressed="false" data-t="t4">Yazıcı ve çevre birimleri bakımı</button>
+      </div></div>
+    <div class="group"><h3>Sistem ve BIOS yönetimi</h3>
+      <div class="chips">
+        <button class="chip" aria-pressed="false" data-t="">Windows Task Scheduler otomasyonları</button>
+        <button class="chip" aria-pressed="false" data-t="">UEFI/BIOS</button>
+        <button class="chip" aria-pressed="false" data-t="">Secure Boot yapılandırması</button>
+      </div></div>
+    <p id="status" aria-live="polite"></p>
+
+    <h2 style="margin-top:22px">Bilgi İşlem Departmanı Stajyeri</h2>
+    <p class="muted" style="margin-bottom:12px">Belediye Bilgi İşlem birimi, staj ve saha çalışmaları</p>
+    <ul class="plain" style="padding:0">
+      <li class="task" id="t1" data-s="SSD/RAM montajı|Termal macun yenileme"><button type="button" aria-expanded="false"><span>Donanım yükseltmeleri</span><span class="sign">+</span></button><p class="more">SSD/RAM montajı ve termal macun değişimi yapıldı.</p></li>
+      <li class="task" id="t2" data-s="Donanım teşhisi"><button type="button" aria-expanded="false"><span>Donanım arıza tespiti</span><span class="sign">+</span></button><p class="more">Bilgisayarlarda donanım arızaları tespit edildi.</p></li>
+      <li class="task" id="t3" data-s="RJ45 kablo sonlandırma"><button type="button" aria-expanded="false"><span>RJ45 kablo sonlandırma ve ağ kablolama</span><span class="sign">+</span></button><p class="more">Ağ kablolama operasyonları yürütüldü.</p></li>
+      <li class="task" id="t4" data-s="Yazıcı ve çevre birimleri bakımı"><button type="button" aria-expanded="false"><span>Yazıcı bakım-onarım servisi</span><span class="sign">+</span></button><p class="more">Yazıcı bakım ve onarım süreçleri gerçekleştirildi.</p></li>
+      <li class="task" id="t5" data-s="RJ45 kablo sonlandırma"><button type="button" aria-expanded="false"><span>Güvenlik kamerası (CCTV) altyapı desteği</span><span class="sign">+</span></button><p class="more">CCTV altyapı destek çalışmaları gerçekleştirildi.</p></li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Eğitim</h2>
+    <p class="sub">Bulut Bilişim Operatörlüğü (Önlisans)</p>
+    <p class="muted">Bilişim Teknolojileri Meslek Yüksekokulu, Adana, Türkiye</p>
+  </section>
+
+  <section class="card">
+    <h2>Ek bilgiler</h2>
+    <ul class="plain"><li>Sınav hedefi: KPSS Ön Lisans (P93)</li><li>Sürücü belgesi: B sınıfı</li></ul>
+  </section>
+</main>
+</div>
+
+<script>
+(function(){
+  var chips=[].slice.call(document.querySelectorAll('.chip')),
+      tasks=[].slice.call(document.querySelectorAll('.task')),
+      status=document.getElementById('status'),
+      root=document.documentElement;
+
+  function clear(){
+    chips.forEach(function(c){c.setAttribute('aria-pressed','false');c.classList.remove('rel')});
+    tasks.forEach(function(t){t.classList.remove('hit','dim')});
+    status.textContent='';
+  }
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){
+      var on=c.getAttribute('aria-pressed')==='true';
+      clear();
+      if(on)return;
+      c.setAttribute('aria-pressed','true');
+      var ids=c.getAttribute('data-t').split(' ').filter(Boolean);
+      if(!ids.length){
+        status.textContent='Bu beceri için staj görevi listelenmemiş.';
+        return;
+      }
+      tasks.forEach(function(t){
+        if(ids.indexOf(t.id)>-1)t.classList.add('hit');else t.classList.add('dim');
+      });
+      status.textContent=ids.length+' staj görevi bu beceriyle eşleşti.';
+    });
+  });
+  tasks.forEach(function(t){
+    var b=t.querySelector('button'),sign=t.querySelector('.sign');
+    b.addEventListener('click',function(){
+      var open=t.classList.toggle('open');
+      b.setAttribute('aria-expanded',open);
+      sign.textContent=open?'−':'+';
+      clear();
+      if(open){
+        var names=t.getAttribute('data-s').split('|');
+        chips.forEach(function(c){
+          if(names.some(function(n){return c.textContent.indexOf(n)===0}))c.classList.add('rel');
+        });
+        t.classList.add('hit');
+        status.textContent='İlgili beceriler sarı ile işaretlendi.';
+      }
+    });
+  });
+
+  var copied=document.getElementById('copied');
+  [].forEach.call(document.querySelectorAll('[data-copy]'),function(b){
+    b.addEventListener('click',function(){
+      var v=b.getAttribute('data-copy');
+      function ok(){copied.textContent='Kopyalandı: '+v}
+      try{navigator.clipboard.writeText(v).then(ok,function(){copied.textContent=v})}
+      catch(e){copied.textContent=v}
+    });
+  });
+
+  document.getElementById('print').addEventListener('click',function(){window.print()});
+  document.getElementById('theme').addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+    root.setAttribute('data-theme',dark?'light':'dark');
+  });
+})();
+</script>
+</body>
+</html>
